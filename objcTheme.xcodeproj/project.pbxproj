@@ -7,9 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE64081D1D5491A400652BAC /* objcTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64081C1D5491A400652BAC /* objcTheme.h */; };
+		FE64081D1D5491A400652BAC /* objcTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64081C1D5491A400652BAC /* objcTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE6408241D5491A400652BAC /* objcTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6408191D5491A400652BAC /* objcTheme.framework */; };
 		FE6408291D5491A400652BAC /* objcThemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6408281D5491A400652BAC /* objcThemeTests.m */; };
+		FE6408361D5491B700652BAC /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = FE6408331D5491B700652BAC /* Cartfile */; };
+		FE6408371D5491B700652BAC /* objcTheme.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FE6408341D5491B700652BAC /* objcTheme.podspec */; };
+		FE6408631D5492DA00652BAC /* objcSelectorArgument.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6408611D5492DA00652BAC /* objcSelectorArgument.framework */; };
+		FE6408641D5492DA00652BAC /* objcWeakRef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6408621D5492DA00652BAC /* objcWeakRef.framework */; };
+		FE64087D1D58116800652BAC /* NSObject+VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6408691D58116800652BAC /* NSObject+VDThemeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE64087E1D58116800652BAC /* NSObject+VDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE64086A1D58116800652BAC /* NSObject+VDThemeManager.m */; };
+		FE64087F1D58116800652BAC /* UIButton+VDTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64086B1D58116800652BAC /* UIButton+VDTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6408801D58116800652BAC /* UIButton+VDTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FE64086C1D58116800652BAC /* UIButton+VDTheme.m */; };
+		FE6408811D58116800652BAC /* UIImageView+VDTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64086D1D58116800652BAC /* UIImageView+VDTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6408821D58116800652BAC /* UIImageView+VDTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FE64086E1D58116800652BAC /* UIImageView+VDTheme.m */; };
+		FE6408831D58116800652BAC /* UILabel+VDTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64086F1D58116800652BAC /* UILabel+VDTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6408841D58116800652BAC /* UILabel+VDTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6408701D58116800652BAC /* UILabel+VDTheme.m */; };
+		FE6408851D58116800652BAC /* UINavigationBar+VDTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6408711D58116800652BAC /* UINavigationBar+VDTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6408861D58116800652BAC /* UINavigationBar+VDTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6408721D58116800652BAC /* UINavigationBar+VDTheme.m */; };
+		FE6408871D58116800652BAC /* UISlider+VDTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6408731D58116800652BAC /* UISlider+VDTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6408881D58116800652BAC /* UISlider+VDTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6408741D58116800652BAC /* UISlider+VDTheme.m */; };
+		FE6408891D58116800652BAC /* UIView+VDTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6408751D58116800652BAC /* UIView+VDTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE64088A1D58116800652BAC /* UIView+VDTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6408761D58116800652BAC /* UIView+VDTheme.m */; };
+		FE64088B1D58116800652BAC /* VDThemeElement.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6408771D58116800652BAC /* VDThemeElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE64088C1D58116800652BAC /* VDThemeElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6408781D58116800652BAC /* VDThemeElement.m */; };
+		FE64088D1D58116800652BAC /* VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6408791D58116800652BAC /* VDThemeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE64088E1D58116800652BAC /* VDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE64087A1D58116800652BAC /* VDThemeManager.m */; };
+		FE64088F1D58116800652BAC /* VDThemeSelectorArgument.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64087B1D58116800652BAC /* VDThemeSelectorArgument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6408901D58116800652BAC /* VDThemeSelectorArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = FE64087C1D58116800652BAC /* VDThemeSelectorArgument.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +53,31 @@
 		FE6408231D5491A400652BAC /* objcThemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = objcThemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6408281D5491A400652BAC /* objcThemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcThemeTests.m; sourceTree = "<group>"; };
 		FE64082A1D5491A400652BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6408331D5491B700652BAC /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		FE6408341D5491B700652BAC /* objcTheme.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = objcTheme.podspec; sourceTree = "<group>"; };
+		FE6408351D5491B700652BAC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FE6408611D5492DA00652BAC /* objcSelectorArgument.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcSelectorArgument.framework; path = Carthage/Build/iOS/objcSelectorArgument.framework; sourceTree = "<group>"; };
+		FE6408621D5492DA00652BAC /* objcWeakRef.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcWeakRef.framework; path = Carthage/Build/iOS/objcWeakRef.framework; sourceTree = "<group>"; };
+		FE6408691D58116800652BAC /* NSObject+VDThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VDThemeManager.h"; sourceTree = "<group>"; };
+		FE64086A1D58116800652BAC /* NSObject+VDThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VDThemeManager.m"; sourceTree = "<group>"; };
+		FE64086B1D58116800652BAC /* UIButton+VDTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+VDTheme.h"; sourceTree = "<group>"; };
+		FE64086C1D58116800652BAC /* UIButton+VDTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+VDTheme.m"; sourceTree = "<group>"; };
+		FE64086D1D58116800652BAC /* UIImageView+VDTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+VDTheme.h"; sourceTree = "<group>"; };
+		FE64086E1D58116800652BAC /* UIImageView+VDTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+VDTheme.m"; sourceTree = "<group>"; };
+		FE64086F1D58116800652BAC /* UILabel+VDTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VDTheme.h"; sourceTree = "<group>"; };
+		FE6408701D58116800652BAC /* UILabel+VDTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VDTheme.m"; sourceTree = "<group>"; };
+		FE6408711D58116800652BAC /* UINavigationBar+VDTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+VDTheme.h"; sourceTree = "<group>"; };
+		FE6408721D58116800652BAC /* UINavigationBar+VDTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+VDTheme.m"; sourceTree = "<group>"; };
+		FE6408731D58116800652BAC /* UISlider+VDTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISlider+VDTheme.h"; sourceTree = "<group>"; };
+		FE6408741D58116800652BAC /* UISlider+VDTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISlider+VDTheme.m"; sourceTree = "<group>"; };
+		FE6408751D58116800652BAC /* UIView+VDTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VDTheme.h"; sourceTree = "<group>"; };
+		FE6408761D58116800652BAC /* UIView+VDTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VDTheme.m"; sourceTree = "<group>"; };
+		FE6408771D58116800652BAC /* VDThemeElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDThemeElement.h; sourceTree = "<group>"; };
+		FE6408781D58116800652BAC /* VDThemeElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDThemeElement.m; sourceTree = "<group>"; };
+		FE6408791D58116800652BAC /* VDThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDThemeManager.h; sourceTree = "<group>"; };
+		FE64087A1D58116800652BAC /* VDThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDThemeManager.m; sourceTree = "<group>"; };
+		FE64087B1D58116800652BAC /* VDThemeSelectorArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDThemeSelectorArgument.h; sourceTree = "<group>"; };
+		FE64087C1D58116800652BAC /* VDThemeSelectorArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDThemeSelectorArgument.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6408631D5492DA00652BAC /* objcSelectorArgument.framework in Frameworks */,
+				FE6408641D5492DA00652BAC /* objcWeakRef.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,9 +104,14 @@
 		FE64080F1D5491A400652BAC = {
 			isa = PBXGroup;
 			children = (
+				FE6408611D5492DA00652BAC /* objcSelectorArgument.framework */,
+				FE6408621D5492DA00652BAC /* objcWeakRef.framework */,
 				FE64081B1D5491A400652BAC /* objcTheme */,
 				FE6408271D5491A400652BAC /* objcThemeTests */,
 				FE64081A1D5491A400652BAC /* Products */,
+				FE6408331D5491B700652BAC /* Cartfile */,
+				FE6408341D5491B700652BAC /* objcTheme.podspec */,
+				FE6408351D5491B700652BAC /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +129,26 @@
 			children = (
 				FE64081C1D5491A400652BAC /* objcTheme.h */,
 				FE64081E1D5491A400652BAC /* Info.plist */,
+				FE6408691D58116800652BAC /* NSObject+VDThemeManager.h */,
+				FE64086A1D58116800652BAC /* NSObject+VDThemeManager.m */,
+				FE64086B1D58116800652BAC /* UIButton+VDTheme.h */,
+				FE64086C1D58116800652BAC /* UIButton+VDTheme.m */,
+				FE64086D1D58116800652BAC /* UIImageView+VDTheme.h */,
+				FE64086E1D58116800652BAC /* UIImageView+VDTheme.m */,
+				FE64086F1D58116800652BAC /* UILabel+VDTheme.h */,
+				FE6408701D58116800652BAC /* UILabel+VDTheme.m */,
+				FE6408711D58116800652BAC /* UINavigationBar+VDTheme.h */,
+				FE6408721D58116800652BAC /* UINavigationBar+VDTheme.m */,
+				FE6408731D58116800652BAC /* UISlider+VDTheme.h */,
+				FE6408741D58116800652BAC /* UISlider+VDTheme.m */,
+				FE6408751D58116800652BAC /* UIView+VDTheme.h */,
+				FE6408761D58116800652BAC /* UIView+VDTheme.m */,
+				FE6408771D58116800652BAC /* VDThemeElement.h */,
+				FE6408781D58116800652BAC /* VDThemeElement.m */,
+				FE6408791D58116800652BAC /* VDThemeManager.h */,
+				FE64087A1D58116800652BAC /* VDThemeManager.m */,
+				FE64087B1D58116800652BAC /* VDThemeSelectorArgument.h */,
+				FE64087C1D58116800652BAC /* VDThemeSelectorArgument.m */,
 			);
 			path = objcTheme;
 			sourceTree = "<group>";
@@ -93,7 +169,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6408851D58116800652BAC /* UINavigationBar+VDTheme.h in Headers */,
+				FE6408831D58116800652BAC /* UILabel+VDTheme.h in Headers */,
+				FE64088F1D58116800652BAC /* VDThemeSelectorArgument.h in Headers */,
+				FE64087D1D58116800652BAC /* NSObject+VDThemeManager.h in Headers */,
+				FE64087F1D58116800652BAC /* UIButton+VDTheme.h in Headers */,
+				FE6408871D58116800652BAC /* UISlider+VDTheme.h in Headers */,
 				FE64081D1D5491A400652BAC /* objcTheme.h in Headers */,
+				FE64088D1D58116800652BAC /* VDThemeManager.h in Headers */,
+				FE64088B1D58116800652BAC /* VDThemeElement.h in Headers */,
+				FE6408811D58116800652BAC /* UIImageView+VDTheme.h in Headers */,
+				FE6408891D58116800652BAC /* UIView+VDTheme.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +264,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6408371D5491B700652BAC /* objcTheme.podspec in Resources */,
+				FE6408361D5491B700652BAC /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +283,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6408881D58116800652BAC /* UISlider+VDTheme.m in Sources */,
+				FE64088E1D58116800652BAC /* VDThemeManager.m in Sources */,
+				FE6408901D58116800652BAC /* VDThemeSelectorArgument.m in Sources */,
+				FE64088C1D58116800652BAC /* VDThemeElement.m in Sources */,
+				FE6408841D58116800652BAC /* UILabel+VDTheme.m in Sources */,
+				FE6408821D58116800652BAC /* UIImageView+VDTheme.m in Sources */,
+				FE64088A1D58116800652BAC /* UIView+VDTheme.m in Sources */,
+				FE6408861D58116800652BAC /* UINavigationBar+VDTheme.m in Sources */,
+				FE64087E1D58116800652BAC /* NSObject+VDThemeManager.m in Sources */,
+				FE6408801D58116800652BAC /* UIButton+VDTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +412,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = objcTheme/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -330,6 +432,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = objcTheme/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -378,6 +484,7 @@
 				FE64082F1D5491A400652BAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE6408301D5491A400652BAC /* Build configuration list for PBXNativeTarget "objcThemeTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +493,7 @@
 				FE6408321D5491A400652BAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
