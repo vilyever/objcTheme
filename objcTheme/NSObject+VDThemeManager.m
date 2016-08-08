@@ -1,6 +1,6 @@
 //
 //  NSObject+VDThemeManager.m
-//  objcTemp
+//  objcTheme
 //
 //  Created by Deng on 16/7/7.
 //  Copyright © Deng. All rights reserved.

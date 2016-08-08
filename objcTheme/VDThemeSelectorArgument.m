@@ -1,6 +1,6 @@
 //
 //  VDThemeSelectorArgument.m
-//  objcTemp
+//  objcTheme
 //
 //  Created by Deng on 16/7/7.
 //  Copyright © Deng. All rights reserved.
@@ -19,12 +19,21 @@ NSString * const VDThemeSelectorArgumentRemoveThemeKey = @"VDThemeSelectorArgume
 
 @implementation VDThemeSelectorArgument
 
-#pragma mark Public Method
+#pragma mark Constructor
 + (instancetype)argumentWithThemeKey:(NSString *)themeKey {
-    VDThemeSelectorArgument *argument = [[VDThemeSelectorArgument alloc] init];
-    argument.themeKey = themeKey;
-    return argument;
+    return [[self alloc] initWithThemeKey:themeKey];
 }
+
+- (instancetype)initWithThemeKey:(NSString *)themeKey {
+    self = [super init];
+    
+    _themeKey = themeKey;
+    
+    return self;
+}
+
+#pragma mark Public Method
+
 
 #pragma mark Properties
 

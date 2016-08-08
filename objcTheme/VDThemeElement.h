@@ -1,6 +1,6 @@
 //
 //  VDThemeElement.h
-//  objcTemp
+//  objcTheme
 //
 //  Created by Deng on 16/7/7.
 //  Copyright © Deng. All rights reserved.
@@ -22,8 +22,12 @@ typedef NS_ENUM(NSInteger, VDThemeElementResourceType) {
 
 @interface VDThemeElement : NSObject
 
+#pragma mark Constructor
++ (instancetype)elementWithResourceType:(VDThemeElementResourceType)resourceType selector:(SEL)selector arguments:(NSArray *)arguments;
+- (instancetype)initWithResourceType:(VDThemeElementResourceType)resourceType selector:(SEL)selector arguments:(NSArray *)arguments;
+
 #pragma mark Public Method
-+ (instancetype)elementWithResourceType:(VDThemeElementResourceType)resourceType withSelector:(SEL)selector withArguments:(NSArray *)arguments;
+
 
 #pragma mark Properties
 @property (nonatomic, assign) VDThemeElementResourceType resourceType;

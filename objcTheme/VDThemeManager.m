@@ -1,6 +1,6 @@
 //
 //  VDThemeManager.m
-//  objcTemp
+//  objcTheme
 //
 //  Created by Deng on 16/7/7.
 //  Copyright © Deng. All rights reserved.
@@ -20,6 +20,9 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoNewThemeTyp
 NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTypeKey = @"VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTypeKey";
 
 @interface VDThemeManager ()
+
+- (void)__i__addTarget:(id)target;
+- (void)__i__onThemeChange:(NSInteger)newThemeType withOldThemeType:(NSInteger)oldThemeType;
 
 @property (nonatomic, assign) BOOL isThemeChangedBefore;
 
@@ -94,32 +97,32 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
     return nil;
 }
 
-+ (void)setColorForTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments {
-    [target vd_addThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeColor withSelector:selector withArguments:arguments]];
-    [[VDThemeManager sharedManager] internalAddTarget:target];
++ (void)setColorForTarget:(id)target selector:(SEL)selector arguments:(NSArray *)arguments {
+    [target vd_addThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeColor selector:selector arguments:arguments]];
+    [[VDThemeManager sharedManager] __i__addTarget:target];
 }
 
-+ (void)setImageForTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments {
-    [target vd_addThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeImage withSelector:selector withArguments:arguments]];
-    [[VDThemeManager sharedManager] internalAddTarget:target];
++ (void)setImageForTarget:(id)target selector:(SEL)selector arguments:(NSArray *)arguments {
+    [target vd_addThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeImage selector:selector arguments:arguments]];
+    [[VDThemeManager sharedManager] __i__addTarget:target];
 }
 
-+ (void)setFontForTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments {
-    [target vd_addThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeFont withSelector:selector withArguments:arguments]];
-    [[VDThemeManager sharedManager] internalAddTarget:target];
++ (void)setFontForTarget:(id)target selector:(SEL)selector arguments:(NSArray *)arguments {
+    [target vd_addThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeFont selector:selector arguments:arguments]];
+    [[VDThemeManager sharedManager] __i__addTarget:target];
 }
 
-+ (void)setAttributeForTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments {
-    [target vd_addThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeAttribute withSelector:selector withArguments:arguments]];
-    [[VDThemeManager sharedManager] internalAddTarget:target];
++ (void)setAttributeForTarget:(id)target selector:(SEL)selector arguments:(NSArray *)arguments {
+    [target vd_addThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeAttribute selector:selector arguments:arguments]];
+    [[VDThemeManager sharedManager] __i__addTarget:target];
 }
 
 + (void)removeTarget:(id)target {
     [target vd_clearThemeElements];
 }
 
-+ (void)removeTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments {
-    [target vd_removeThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeRemove withSelector:selector withArguments:arguments]];
++ (void)removeTarget:(id)target selector:(SEL)selector arguments:(NSArray *)arguments {
+    [target vd_removeThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeRemove selector:selector arguments:arguments]];
 }
 
 #pragma mark Properties
@@ -128,7 +131,7 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
         NSInteger oldThemeType = _themeType;
         _themeType = themeType;
         [[NSUserDefaults standardUserDefaults] setObject:@(_themeType) forKey:VDThemeManagerThemeTypeKey];
-        [self internalOnThemeChange:_themeType withOldThemeType:oldThemeType];
+        [self __i__onThemeChange:_themeType withOldThemeType:oldThemeType];
     }
 }
 
@@ -162,13 +165,13 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
 
 
 #pragma mark Private Method      
-- (void)internalAddTarget:(id)target {
+- (void)__i__addTarget:(id)target {
     if (![self.themeTargets containsObject:target]) {
         [self.themeTargets addObject:[target vd_weakRef]];
     }
 }
 
-- (void)internalOnThemeChange:(NSInteger)newThemeType withOldThemeType:(NSInteger)oldThemeType {
+- (void)__i__onThemeChange:(NSInteger)newThemeType withOldThemeType:(NSInteger)oldThemeType {
     for (id target in [self.themeTargets copy]) {
         if ([target respondsToSelector:@selector(vd_onThemeChange:withOldThemeType:)]) {
             [target vd_onThemeChange:newThemeType withOldThemeType:oldThemeType];

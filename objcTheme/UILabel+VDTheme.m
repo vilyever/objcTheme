@@ -10,8 +10,6 @@
 #import "VDThemeManager.h"
 
 //#import <objc/runtime.h>
-//#import "objcTemp.h"
-//@import objcTemp;
 
 
 @implementation UILabel (VDTheme)
@@ -21,10 +19,10 @@
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     
     if (key) {
-        [VDThemeManager setColorForTarget:self withSelector:@selector(setTextColor:) withArguments:@[argument1]];
+        [VDThemeManager setColorForTarget:self selector:@selector(setTextColor:) arguments:@[argument1]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setTextColor:) withArguments:@[argument1]];
+        [VDThemeManager removeTarget:self selector:@selector(setTextColor:) arguments:@[argument1]];
     }
 }
 
@@ -32,10 +30,10 @@
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     
     if (key) {
-        [VDThemeManager setColorForTarget:self withSelector:@selector(setShadowColor:) withArguments:@[argument1]];
+        [VDThemeManager setColorForTarget:self selector:@selector(setShadowColor:) arguments:@[argument1]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setShadowColor:) withArguments:@[argument1]];
+        [VDThemeManager removeTarget:self selector:@selector(setShadowColor:) arguments:@[argument1]];
     }
 }
 
@@ -43,10 +41,10 @@
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     
     if (key) {
-        [VDThemeManager setColorForTarget:self withSelector:@selector(setHighlightedTextColor:) withArguments:@[argument1]];
+        [VDThemeManager setColorForTarget:self selector:@selector(setHighlightedTextColor:) arguments:@[argument1]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setHighlightedTextColor:) withArguments:@[argument1]];
+        [VDThemeManager removeTarget:self selector:@selector(setHighlightedTextColor:) arguments:@[argument1]];
     }
 }
 

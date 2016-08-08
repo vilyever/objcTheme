@@ -1,6 +1,6 @@
 //
 //  UIButton+VDTheme.m
-//  objcTemp
+//  objcTheme
 //
 //  Created by Deng on 16/7/14.
 //  Copyright © Deng. All rights reserved.
@@ -10,8 +10,6 @@
 #import "VDThemeManager.h"
 
 //#import <objc/runtime.h>
-//#import "objcTemp.h"
-//@import objcTemp;
 
 
 @implementation UIButton (VDTheme)
@@ -22,10 +20,10 @@
     VDThemeSelectorArgument *argument2 = [VDThemeSelectorArgument argumentWithIntegerArgument:state];
     
     if (key) {
-        [VDThemeManager setColorForTarget:self withSelector:@selector(setTitleColor:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager setColorForTarget:self selector:@selector(setTitleColor:forState:) arguments:@[argument1, argument2]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setTitleColor:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager removeTarget:self selector:@selector(setTitleColor:forState:) arguments:@[argument1, argument2]];
     }
 }
 
@@ -34,10 +32,10 @@
     VDThemeSelectorArgument *argument2 = [VDThemeSelectorArgument argumentWithIntegerArgument:state];
     
     if (key) {
-        [VDThemeManager setColorForTarget:self withSelector:@selector(setTitleShadowColor:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager setColorForTarget:self selector:@selector(setTitleShadowColor:forState:) arguments:@[argument1, argument2]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setTitleShadowColor:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager removeTarget:self selector:@selector(setTitleShadowColor:forState:) arguments:@[argument1, argument2]];
     }
     
 }
@@ -47,10 +45,10 @@
     VDThemeSelectorArgument *argument2 = [VDThemeSelectorArgument argumentWithIntegerArgument:state];
     
     if (key) {
-        [VDThemeManager setImageForTarget:self withSelector:@selector(setImage:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager setImageForTarget:self selector:@selector(setImage:forState:) arguments:@[argument1, argument2]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setImage:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager removeTarget:self selector:@selector(setImage:forState:) arguments:@[argument1, argument2]];
     }
 }
 
@@ -59,10 +57,10 @@
     VDThemeSelectorArgument *argument2 = [VDThemeSelectorArgument argumentWithIntegerArgument:state];
     
     if (key) {
-        [VDThemeManager setImageForTarget:self withSelector:@selector(setBackgroundImage:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager setImageForTarget:self selector:@selector(setBackgroundImage:forState:) arguments:@[argument1, argument2]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setBackgroundImage:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager removeTarget:self selector:@selector(setBackgroundImage:forState:) arguments:@[argument1, argument2]];
     }
 }
 

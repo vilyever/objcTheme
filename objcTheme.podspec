@@ -32,6 +32,7 @@ Pod::Spec.new do |s|
   s.public_header_files = 'objcTheme/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
-#  s.dependency 'objcView'
+  s.dependency 'objcSelectorArgument'
+  s.dependency 'objcWeakRef'
 
 end

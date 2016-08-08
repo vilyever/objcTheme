@@ -1,6 +1,6 @@
 //
 //  UISlider+VDTheme.m
-//  objcTemp
+//  objcTheme
 //
 //  Created by Deng on 16/7/14.
 //  Copyright © Deng. All rights reserved.
@@ -10,8 +10,6 @@
 #import "VDThemeManager.h"
 
 //#import <objc/runtime.h>
-//#import "objcTemp.h"
-//@import objcTemp;
 
 
 @implementation UISlider (VDTheme)
@@ -21,10 +19,10 @@
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     
     if (key) {
-        [VDThemeManager setColorForTarget:self withSelector:@selector(setThumbTintColor:) withArguments:@[argument1]];
+        [VDThemeManager setColorForTarget:self selector:@selector(setThumbTintColor:) arguments:@[argument1]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setThumbTintColor:) withArguments:@[argument1]];
+        [VDThemeManager removeTarget:self selector:@selector(setThumbTintColor:) arguments:@[argument1]];
     }
 }
 
@@ -32,10 +30,10 @@
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     
     if (key) {
-        [VDThemeManager setColorForTarget:self withSelector:@selector(setMinimumTrackTintColor:) withArguments:@[argument1]];
+        [VDThemeManager setColorForTarget:self selector:@selector(setMinimumTrackTintColor:) arguments:@[argument1]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setMinimumTrackTintColor:) withArguments:@[argument1]];
+        [VDThemeManager removeTarget:self selector:@selector(setMinimumTrackTintColor:) arguments:@[argument1]];
     }
 }
 
@@ -43,10 +41,10 @@
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     
     if (key) {
-        [VDThemeManager setColorForTarget:self withSelector:@selector(setMaximumTrackTintColor:) withArguments:@[argument1]];
+        [VDThemeManager setColorForTarget:self selector:@selector(setMaximumTrackTintColor:) arguments:@[argument1]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setMaximumTrackTintColor:) withArguments:@[argument1]];
+        [VDThemeManager removeTarget:self selector:@selector(setMaximumTrackTintColor:) arguments:@[argument1]];
     }
 }
 
@@ -54,10 +52,10 @@
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     
     if (key) {
-        [VDThemeManager setImageForTarget:self withSelector:@selector(setMinimumValueImage:) withArguments:@[argument1]];
+        [VDThemeManager setImageForTarget:self selector:@selector(setMinimumValueImage:) arguments:@[argument1]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setMinimumValueImage:) withArguments:@[argument1]];
+        [VDThemeManager removeTarget:self selector:@selector(setMinimumValueImage:) arguments:@[argument1]];
     }
 }
 
@@ -65,10 +63,10 @@
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     
     if (key) {
-        [VDThemeManager setImageForTarget:self withSelector:@selector(setMaximumValueImage:) withArguments:@[argument1]];
+        [VDThemeManager setImageForTarget:self selector:@selector(setMaximumValueImage:) arguments:@[argument1]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setMaximumValueImage:) withArguments:@[argument1]];
+        [VDThemeManager removeTarget:self selector:@selector(setMaximumValueImage:) arguments:@[argument1]];
     }
 }
 
@@ -77,10 +75,10 @@
     VDThemeSelectorArgument *argument2 = [VDThemeSelectorArgument argumentWithIntegerArgument:state];
     
     if (key) {
-        [VDThemeManager setImageForTarget:self withSelector:@selector(setThumbImage:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager setImageForTarget:self selector:@selector(setThumbImage:forState:) arguments:@[argument1, argument2]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setThumbImage:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager removeTarget:self selector:@selector(setThumbImage:forState:) arguments:@[argument1, argument2]];
     }
 }
 
@@ -89,10 +87,10 @@
     VDThemeSelectorArgument *argument2 = [VDThemeSelectorArgument argumentWithIntegerArgument:state];
     
     if (key) {
-        [VDThemeManager setImageForTarget:self withSelector:@selector(setMinimumTrackImage:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager setImageForTarget:self selector:@selector(setMinimumTrackImage:forState:) arguments:@[argument1, argument2]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setMinimumTrackImage:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager removeTarget:self selector:@selector(setMinimumTrackImage:forState:) arguments:@[argument1, argument2]];
     }
 }
 
@@ -101,10 +99,10 @@
     VDThemeSelectorArgument *argument2 = [VDThemeSelectorArgument argumentWithIntegerArgument:state];
     
     if (key) {
-        [VDThemeManager setImageForTarget:self withSelector:@selector(setMaximumTrackImage:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager setImageForTarget:self selector:@selector(setMaximumTrackImage:forState:) arguments:@[argument1, argument2]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setMaximumTrackImage:forState:) withArguments:@[argument1, argument2]];
+        [VDThemeManager removeTarget:self selector:@selector(setMaximumTrackImage:forState:) arguments:@[argument1, argument2]];
     }
 }
 

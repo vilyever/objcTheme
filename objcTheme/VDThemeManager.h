@@ -1,6 +1,6 @@
 //
 //  VDThemeManager.h
-//  objcTemp
+//  objcTheme
 //
 //  Created by Deng on 16/7/7.
 //  Copyright © Deng. All rights reserved.
@@ -43,12 +43,12 @@ extern NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldT
 + (UIFont *)fontForKey:(NSString *)key;
 + (id)attributeForKey:(NSString *)key;
 
-+ (void)setColorForTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments;
-+ (void)setImageForTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments;
-+ (void)setFontForTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments;
-+ (void)setAttributeForTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments;
++ (void)setColorForTarget:(id)target selector:(SEL)selector arguments:(NSArray *)arguments;
++ (void)setImageForTarget:(id)target selector:(SEL)selector arguments:(NSArray *)arguments;
++ (void)setFontForTarget:(id)target selector:(SEL)selector arguments:(NSArray *)arguments;
++ (void)setAttributeForTarget:(id)target selector:(SEL)selector arguments:(NSArray *)arguments;
 + (void)removeTarget:(id)target;
-+ (void)removeTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments;
++ (void)removeTarget:(id)target selector:(SEL)selector arguments:(NSArray *)arguments;
 
 #pragma mark Properties
 @property (nonatomic, weak) id<VDThemeManagerDatasource> datasource;
@@ -57,7 +57,5 @@ extern NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldT
 @property (nonatomic, assign) NSTimeInterval animationDuration;
 
 #pragma mark Private Method
-- (void)internalAddTarget:(id)target;
-- (void)internalOnThemeChange:(NSInteger)newThemeType withOldThemeType:(NSInteger)oldThemeType;
 
 @end

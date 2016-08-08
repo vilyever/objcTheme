@@ -1,6 +1,6 @@
 //
 //  UIImageView+VDTheme.m
-//  objcTemp
+//  objcTheme
 //
 //  Created by Deng on 16/7/14.
 //  Copyright © Deng. All rights reserved.
@@ -10,8 +10,6 @@
 #import "VDThemeManager.h"
 
 //#import <objc/runtime.h>
-//#import "objcTemp.h"
-//@import objcTemp;
 
 
 @implementation UIImageView (VDTheme)
@@ -21,10 +19,10 @@
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     
     if (key) {
-        [VDThemeManager setImageForTarget:self withSelector:@selector(setImage:) withArguments:@[argument1]];
+        [VDThemeManager setImageForTarget:self selector:@selector(setImage:) arguments:@[argument1]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setImage:) withArguments:@[argument1]];
+        [VDThemeManager removeTarget:self selector:@selector(setImage:) arguments:@[argument1]];
     }
 }
 
@@ -32,10 +30,10 @@
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     
     if (key) {
-        [VDThemeManager setImageForTarget:self withSelector:@selector(setHighlightedImage:) withArguments:@[argument1]];
+        [VDThemeManager setImageForTarget:self selector:@selector(setHighlightedImage:) arguments:@[argument1]];
     }
     else {
-        [VDThemeManager removeTarget:self withSelector:@selector(setHighlightedImage:) withArguments:@[argument1]];
+        [VDThemeManager removeTarget:self selector:@selector(setHighlightedImage:) arguments:@[argument1]];
     }
 }
 

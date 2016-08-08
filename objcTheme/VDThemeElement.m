@@ -1,6 +1,6 @@
 //
 //  VDThemeElement.m
-//  objcTemp
+//  objcTheme
 //
 //  Created by Deng on 16/7/7.
 //  Copyright © Deng. All rights reserved.
@@ -17,14 +17,23 @@
 
 @implementation VDThemeElement
 
-#pragma mark Public Method
-+ (instancetype)elementWithResourceType:(VDThemeElementResourceType)resourceType withSelector:(SEL)selector withArguments:(NSArray *)arguments {
-    VDThemeElement *element = [[VDThemeElement alloc] init];
-    element.resourceType = resourceType;
-    element.selector = selector;
-    element.arguments = arguments;
-    return element;
+#pragma mark Constructor
+
++ (instancetype)elementWithResourceType:(VDThemeElementResourceType)resourceType selector:(SEL)selector arguments:(NSArray *)arguments {
+    return [[self alloc] initWithResourceType:resourceType selector:selector arguments:arguments];
 }
+
+- (instancetype)initWithResourceType:(VDThemeElementResourceType)resourceType selector:(SEL)selector arguments:(NSArray *)arguments {
+    self = [super init];
+    
+    _resourceType = resourceType;
+    _selector = selector;
+    self.arguments = arguments;
+    
+    return self;
+}
+
+#pragma mark Public Method
 
 #pragma mark Properties
 - (void)setArguments:(NSArray *)arguments {

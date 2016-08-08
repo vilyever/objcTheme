@@ -1,6 +1,6 @@
 //
 //  VDThemeSelectorArgument.h
-//  objcTemp
+//  objcTheme
 //
 //  Created by Deng on 16/7/7.
 //  Copyright © Deng. All rights reserved.
@@ -16,8 +16,13 @@ extern NSString * const VDThemeSelectorArgumentRemoveThemeKey;
 
 @interface VDThemeSelectorArgument : VDSelectorArgument
 
-#pragma mark Public Method
+#pragma mark Constructor
 + (instancetype)argumentWithThemeKey:(NSString *)themeKey;
+- (instancetype)initWithThemeKey:(NSString *)themeKey;
+
+
+#pragma mark Public Method
+
 
 #pragma mark Properties
 @property (nonatomic, copy) NSString *themeKey;
