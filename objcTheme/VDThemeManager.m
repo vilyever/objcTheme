@@ -38,7 +38,7 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
     static id _sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [ [ [self class] alloc] init];
+        _sharedInstance = [[self alloc] init];
     } );
     
     return _sharedInstance;
